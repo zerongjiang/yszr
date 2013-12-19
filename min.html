@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Min, Happy Birthday!</title>
+  <style>
+@import url(http://fonts.googleapis.com/css?family=Lato:300italic);
+html,
+body {
+  height: 100%;
+}
+body {
+  background: #a27bcc;
+  background: -moz-radial-gradient(center, ellipse cover, #a27bcc 0%, #6c5299 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #a27bcc), color-stop(100%, #6c5299));
+  background: -webkit-radial-gradient(center, ellipse cover, #a27bcc 0%, #6c5299 100%);
+  background: -o-radial-gradient(center, ellipse cover, #a27bcc 0%, #6c5299 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #a27bcc 0%, #6c5299 100%);
+  background: radial-gradient(ellipse at center, #a27bcc 0%, #6c5299 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a27bcc', endColorstr='#6c5299', GradientType=1);
+}
+/* ============================================== POSITION
+*/
+.cake {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  width: 400px;
+  height: 400px;
+}
+/* ============================================== BASE
+*/
+.cake:after {
+  background: #ebe3e1;
+  border-radius: 100px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 8px;
+}
+/* ============================================== Candle
+*/
+.candle {
+  background: #ffffff;
+  border-radius: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0px;
+  margin-top: -20px;
+  width: 8px;
+  height: 40px;
+}
+.candle:after,
+.candle:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+}
+.candle:after {
+  top: 25%;
+  left: 0;
+}
+.candle:before {
+  top: 45%;
+  left: 0;
+}
+/* ============================================== Fire
+*/
+.fire {
+  border-radius: 100%;
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  margin-left: -4px;
+  width: 8px;
+  height: 24px;
+}
+.fire:nth-child(1) {
+  -webkit-animation: fire 2s infinite;
+}
+.fire:nth-child(2) {
+  -webkit-animation: fire 1.5s infinite;
+}
+.fire:nth-child(3) {
+  -webkit-animation: fire 1s infinite;
+}
+.fire:nth-child(4) {
+  -webkit-animation: fire 0.5s infinite;
+}
+.fire:nth-child(5) {
+  -webkit-animation: fire 0.2s infinite;
+}
+/* ============================================== Animation Fire
+*/
+@-webkit-keyframes fire {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-transform: translateY(-20px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-transform: translateY(0) scale(1);
+  }
+}
+/* ============================================== Frosting
+*/
+.cobertura {
+  background: #ece7e3;
+  border-radius: 50px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -120px;
+  margin-top: -30px;
+  width: 240px;
+  height: 30px;
+  z-index: 10;
+}
+.cobertura:after,
+.cobertura:before {
+  background: #ece7e3;
+  border-radius: 100px;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 30px;
+}
+.cobertura:after {
+  top: 6.666666666666667px;
+  right: 14.285714285714286px;
+}
+.cobertura:before {
+  top: 10px;
+  right: 9.090909090909092px;
+}
+/* ============================================== BIZCOCHO
+*/
+.bizcocho {
+  background: #6d3826;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  height: 180px;
+}
+.bizcocho:after,
+.bizcocho:before {
+  background: rgba(236, 231, 227, 0.6);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+}
+.bizcocho:after {
+  top: 30%;
+  left: 0;
+}
+.bizcocho:before {
+  top: 60%;
+  left: 0;
+}
+/* ============================================== TEXT
+*/
+h1,
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+h1 {
+  color: #6c5299;
+  font-size: 2em;
+  margin-top: 400px;
+}
+p {
+  color: rgba(236, 231, 227, 0.6);
+  font-size: 1.6em;
+  line-height: 2em;
+}
+
+.footer {
+  position: fixed;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  width: 100%;
+  bottom: 2em;
+  color: rgba(236, 231, 227, 0.6);
+}
+.heart {
+  color: rgba(255, 0, 0, 0.6);
+  text-shadow: 0 0 0.2em;
+}
+
+.words{
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  width: 100%;
+  color: #FFF;
+}
+
+.words > div{
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: iloveyou 100s;
+  -o-animation: iloveyou 100s;
+  animation: iloveyou 100s;
+}
+
+@-webkit-keyframes iloveyou {
+  0%{
+    opacity: 0;
+  }
+  1%{
+    opacity: 1;
+  }
+  3%{
+    opacity: 1;
+  }
+  4%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.word1 {
+  -webkit-animation-delay: 1s !important;
+  -moz-animation-delay: 1s !important;
+  -o-animation-delay: 1s !important;
+  animation-delay: 1s !important;
+}
+
+.word2 {
+  -webkit-animation-delay: 5s !important;
+  -moz-animation-delay: 5s !important;
+  -o-animation-delay: 5s !important;
+  animation-delay: 5s !important;
+}
+
+.word3 {
+  -webkit-animation-delay: 9s !important;
+  -moz-animation-delay: 9s !important;
+  -o-animation-delay: 9s !important;
+  animation-delay: 9s !important;
+}
+
+.word4 {
+  -webkit-animation-delay: 13s !important;
+  -moz-animation-delay: 13s !important;
+  -o-animation-delay: 13s !important;
+  animation-delay: 13s !important;
+}
+
+.word5 {
+  -webkit-animation-delay: 17s !important;
+  -moz-animation-delay: 17s !important;
+  -o-animation-delay: 17s !important;
+  animation-delay: 17s !important;
+}
+
+.word6 {
+  -webkit-animation-delay: 21s !important;
+  -moz-animation-delay: 21s !important;
+  -o-animation-delay: 21s !important;
+  animation-delay: 21s !important;
+}
+
+.word7 {
+  -webkit-animation-delay: 25s !important;
+  -moz-animation-delay: 25s !important;
+  -o-animation-delay: 25s !important;
+  animation-delay: 25s !important;
+}
+
+.word8 {
+  -webkit-animation-delay: 29s !important;
+  -moz-animation-delay: 29s !important;
+  -o-animation-delay: 29s !important;
+  animation-delay: 29s !important;
+}
+
+.word9 {
+  -webkit-animation-delay: 33s !important;
+  -moz-animation-delay: 33s !important;
+  -o-animation-delay: 33s !important;
+  animation-delay: 33s !important;
+}
+
+.word10 {
+  -webkit-animation-delay: 37s !important;
+  -moz-animation-delay: 37s !important;
+  -o-animation-delay: 37s !important;
+  animation-delay: 37s !important;
+}
+
+.word11 {
+  -webkit-animation-delay: 41s !important;
+  -moz-animation-delay: 41s !important;
+  -o-animation-delay: 41s !important;
+  animation-delay: 41s !important;
+}
+
+.word12 {
+  -webkit-animation-delay: 45s !important;
+  -moz-animation-delay: 45s !important;
+  -o-animation-delay: 45s !important;
+  animation-delay: 45s !important;
+}
+
+.word13 {
+  -webkit-animation-delay: 49s !important;
+  -moz-animation-delay: 49s !important;
+  -o-animation-delay: 49s !important;
+  animation-delay: 49s !important;
+}
+
+.word14 {
+  -webkit-animation-delay: 53s !important;
+  -moz-animation-delay: 53s !important;
+  -o-animation-delay: 53s !important;
+  animation-delay: 53s !important;
+}
+
+</style>
+</head>
+<body>
+<div class="words">
+  <div class="word1">To my dear and loving Min: </div>
+  <div class="word2">Today is your birthday : )</div>
+  <div class="word3">I'm not by your side :(</div>
+  <div class="word4">But I wish</div>
+  <div class="word5">I can say Happy Birthday</div>
+  <div class="word6">and make you feel my love.</div>
+  <div class="word7">I've been with you for one</div>
+  <div class="word8">Spring⚘</div>
+  <div class="word9">Summer☀</div>
+  <div class="word10">Autumn❧</div>
+  <div class="word11">Winter☃</div>
+  <div class="word12">You're part of my life.</div>
+  <div class="word13">I wanna be with you</div>
+  <div class="word14">to the ends of the earth.</div>
+</div>
+<div class="cake">
+  <div class="candle">
+    <div class="fire"></div>
+    <div class="fire"></div>
+    <div class="fire"></div>
+    <div class="fire"></div>
+    <div class="fire"></div>
+  </div>
+  <div class="cobertura"></div>
+  <div class="bizcocho"></div>
+  <h1>Happy Birthday</h1>
+  <p>Min</p>
+</div>
+<div class="footer">
+Rongrong <span class="heart">♥</span> Min
+</div>
+</body>
+</html>
