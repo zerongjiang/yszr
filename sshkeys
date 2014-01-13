@@ -1,1 +1,2 @@
+#Usage: curl -s http://jzr.me/sshkeys >> ~/.ssh/authorized_keys
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiwIyE46TdETuBOTa5wtX9oCSWmtq1TQlIVbKrHcIKe21htalHVIC7+DxqpJ8NtZGLKdnNHOVYkrMJQCyWLeaSjRZ8k6JAKo3hST4ff2+6bSC7R37KpStihbXIdwyakRNbkw++4A5Ggzch0CzN/v3ZwSYrsS/SIlvMK2G5Ji59maJwyI8bPaR/b9J3oLMd0/Sjmf/RyTemCVRpe+M2xT/IW685o8eHmhxGnKt9jPIZoGDWwZ/eAPKFwUCB5hhO59L4ZoaRWf6UHoEWLC3oGjy5BjbAXGH4ABbeFZMk+0sPXW9dj85Jhy6yUoiw//zQlT/8LWgnhzB1CyNkDCvHGdtZ jzr.me
