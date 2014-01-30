@@ -6,5 +6,5 @@ Also containing some stuff **JUST FOR FUN**.
 
 * Quickly add my public SSH key to a host.
   ```bash
-  curl -s http://jzr.me/sshkeys >> ~/.ssh/authorized_keys
+  curl -sL http://jzr.me/sshkeys >> ~/.ssh/authorized_keys
   ```
