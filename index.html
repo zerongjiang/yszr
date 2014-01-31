@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Zerong Jiang</title>
 <meta name="og:type" content="profile">
 <meta name="og:url" content="http://jzr.me">
@@ -46,16 +46,28 @@ body{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+ul, ol{
+  margin: 0; padding: 0;
+  list-style: none;
+}
 canvas{
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 h1{
   font-size: 1.5em;
 }
 h2{
   font-size: 1em;
+  font-weight: normal;
+}
+h3{
+  margin: 0;
+  font-size: 1em;
+}
+h4{
+  margin: 0;
+  font-size: 0.8em;
   font-weight: normal;
 }
 #wrapper{
@@ -78,16 +90,15 @@ h2{
   -webkit-animation: expandIn .2s;
   perspective: 1000px;
   -webkit-perspective: 1000px;
-  /* transition: all .5s; */
-  /* -moz-transition: all .5s; */
-  /* -webkit-transition: all .5s; */
-  /* -o-transition: all .5s; */
 }
 .avatar a.circle{
-  width: 106px; height: 106px;
+  width: 100px; height: 100px;
   position: relative;
   z-index: 1;
   display: inline-block;
+  border: 3px white solid;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 2px rgba(0,0,0,.3);
   /* filter: gray; */
   /* -webkit-filter: grayscale(1); */
   transition: all .2s;
@@ -97,9 +108,7 @@ h2{
 }
 .avatar img{
   width: 100px; height: 100px;
-  border: 3px white solid;
   border-radius: 50%;
-  box-shadow: 0 2px 10px 2px rgba(0,0,0,.3);
 }
 .card{
   position: absolute;
@@ -113,9 +122,7 @@ h2{
   visibility: hidden;
   opacity: 0;
   transition: all .2s ease-out;
-  -moz-transition: all .2s ease-out;
   -webkit-transition: all .2s ease-out;
-  -o-transition: all .2s ease-out;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform: translateY(0%) rotateX(90deg);
@@ -185,10 +192,11 @@ h2{
 .tabs{
   list-style: none;
   margin: 0; padding: 0;
-}
-.tabs li{
-  width: 25%;
   height: 24px;
+}
+.tabs > li{
+  width: 25%;
+  height: 100%;
   line-height: 24px;
   display: block;
   float: left;
@@ -203,21 +211,23 @@ h2{
   -webkit-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
 }
-.tabs li:last-child{
+.tabs > li:last-child{
   border-right: none;
 }
-.tabs li:hover{
+.tabs > li:hover{
   background: #191919;
+  border-bottom: 2px solid #990000;
 }
-.tabs li div.tabContent{
+.tabs > li div.tabContent{
   text-align: left;
   width: 100%;
-  height: 280px;
+  height: 276px;
   position: absolute;
   top: 24px;
   left: 0;
   padding: 10px;
-  color: #222;
+  color: black;
+  font-weight: normal;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   visibility: hidden;
@@ -229,11 +239,110 @@ h2{
   -webkit-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
 }
-.tabs li:hover > div.tabContent{
+.tabs > li:hover > div.tabContent{
   animation: slideIn .2s ease-out;
   -webkit-animation: slideIn .2s ease-out;
   visibility: visible;
 }
+.details > div.intro{
+  color: black;
+  padding: 20px;
+}
+
+.skills ul li{
+  color: rgba(153, 0, 0, 1);
+  float: left;
+  height: 26px;
+  margin: 0 5px 5px 0;
+  line-height: 23px;
+  padding: 0 9px 0 8px;
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: 0 1px white;
+  background: #fafafa;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #dadada #d2d2d2 #c5c5c5 #bdbdbd;
+  border-radius: 3px 3px 3px 3px;
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #f0f0f0);
+  background-image: -moz-linear-gradient(top, #fcfcfc, #f0f0f0);
+  background-image: -o-linear-gradient(top, #fcfcfc, #f0f0f0);
+  background-image: linear-gradient(to bottom, #fcfcfc, #f0f0f0);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.skills ul li.l1{ color: rgba(153, 0, 0, 0.4); }
+.skills ul li.l2{ color: rgba(153, 0, 0, 0.5); }
+.skills ul li.l3{ color: rgba(153, 0, 0, 0.6); }
+.skills ul li.l4{ color: rgba(153, 0, 0, 0.7); }
+.skills ul li.l5{ color: rgba(153, 0, 0, 0.8); }
+.skills ul li.l6{ color: rgba(153, 0, 0, 0.9); }
+.skills ul li.l7{ color: rgba(153, 0, 0, 1); }
+
+.levelbar{
+  height: 20px;
+  background-image: linear-gradient(left, rgba(153, 0, 0, 0.4), rgba(153, 0, 0, 1));
+  background-image: -webkit-linear-gradient(left, rgba(153, 0, 0, 0.4), rgba(153, 0, 0, 1));
+  background-image: -moz-linear-gradient(left, rgba(153, 0, 0, 0.4), rgba(153, 0, 0, 1));
+  display: block;
+  vertical-align: middle;
+  line-height: 20px;
+  padding: 0 3px;
+  margin-bottom: 10px;
+}
+.levelbar::before, .levelbar::after{
+  display: inline-block;
+  color: white;
+}
+.levelbar::before{
+  content: "Beginner";
+}
+.levelbar::after{
+  content: "Expert";
+  float: right;
+}
+
+.tabContent.expr{
+  overflow-y: auto;
+}
+.tabContent.expr > ul, .tabContent.edu > ul{
+  margin-left: 16px;
+}
+.tabContent.expr > ul > li::before{
+  content: "\f0b1";
+}
+.tabContent.edu > ul > li::before{
+  content: "\f02d";
+}
+.tabContent.expr > ul > li::before, .tabContent.edu > ul > li::before{
+  font-family: FontAwesome;
+  position: absolute;
+  left: 8px;
+}
+.tabContent.expr .exprlist{
+  list-style-type: square;
+  margin-left: 16px;
+}
+.tabContent.expr .exprlist li{
+  font-size: 0.9em;
+  line-height: 16px;
+}
+
+.tabContent.contact li {
+  display: block;
+  width: 50%;
+  height: 130px;
+  float: left;
+  text-align: center;
+  line-height: 140px;
+}
+
+.tabContent.contact li a i.fa{
+  color: #990000;
+}
+
+
 @keyframes slideIn{
   0%{left: 100%;}
   100%{left: 0;}
@@ -253,7 +362,7 @@ h2{
 </style>
 </head>
 <body>
-<canvas></canvas>
+<canvas onclick="void(0)"></canvas>
 <div id="wrapper">
   <div class="avatar">
     <a href="javascript:void(0)" class="circle">
@@ -265,55 +374,106 @@ h2{
       </div>
       <div class="details">
         <ul class="tabs">
-          <li>
-            <span>Hello</span>
-            <div class="tabContent">
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-            </div>
-          </li>
-          <li>
-            <span>Skills</span>
-            <div class="tabContent">
-              tab content 2
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-            </div>
-          </li>
-          <li>
+          <li onclick="void(0)">
             <span>Experience</span>
-            <div class="tabContent">
-              tab content 3
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
+            <div class="tabContent expr">
+              <ul>
+                <li>
+                  <h3>Senior Web Developer at CHARGED.fm</h3>
+                  <h4 class="preriod">2012 - Present</h4>
+                  <ul class="exprlist">
+                    <li>Designed and built RESTful Web Service compatible with OAuth2.</li>
+                    <li>Designed and built interactive map system with Javascript/SVG.</li>
+                    <li>Worked with iOS team to feed API to mobile application.</li>
+                    <li>Administered Server Stack including Load Balancer, Web Server, Database Server, Mail Server.</li>
+                    <li>Improved application speed using profiler tools, reduced page load time to 30%.</li>
+                    <li>Integrated 3rd part platform, synchronized data from Sybase.</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </li>
-          <li>
+          <li onclick="void(0)">
+            <span>Skills</span>
+            <div class="tabContent skills">
+              <span class="levelbar"></span>
+              <ul>
+                <li class="l4">Algorithm</li>
+                <li class="l7">Apache HTTP</li>
+                <li class="l1">Android</li>
+                <li class="l3">Ansible</li>
+                <li class="l2">AWS</li>
+                <li class="l5">Bash</li>
+                <li class="l7">CSS</li>
+                <li class="l4">C++</li>
+                <li class="l6">Git</li>
+                <li class="l7">HTML</li>
+                <li class="l4">Java</li>
+                <li class="l7">Javascript</li>
+                <li class="l7">Linux</li>
+                <li class="l4">Memcached</li>
+                <li class="l4">Mongodb</li>
+                <li class="l7">Mysql</li>
+                <li class="l7">Nginx</li>
+                <li class="l5">Node.js</li>
+                <li class="l7">PHP</li>
+                <li class="l4">Puppet</li>
+                <li class="l3">Python</li>
+                <li class="l7">RESTful API</li>
+                <li class="l3">Ruby</li>
+                <li class="l6">Sublime</li>
+                <li class="l3">Varnish</li>
+                <li class="l6">Vim</li>
+              </ul>
+            </div>
+          </li>
+          <li onclick="void(0)">
+            <span>Education</span>
+            <div class="tabContent edu">
+              <ul>
+                <li>
+                  <h3>Polytechnic Institute of New York University</h3>
+                  <h4 class="preriod">2009 - 2011</h4>
+                  <h4>Computer Science</h4>
+                </li>
+                <li>
+                  <h3>Nanjing University</h3>
+                  <h4 class="preriod">2005 - 2009</h4>
+                  <h4>Computer Science</h4>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li onclick="void(0)">
             <span>Contact</span>
-            <div class="tabContent">
-              tab content 4
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
-              ttab content 1tab content 1tab content 1tab content 1tab content 1ab content 1
+            <div class="tabContent contact">
+              <ul>
+                <li><a href="mailto:denzeljiang@gmail.com"><i class="fa fa-envelope fa-4x"></i></a></li>
+                <li><a href="http://github.com/denzeljiang"><i class="fa fa-github fa-4x"></i></a></li>
+                <li><a href="http://www.linkedin.com/in/denzeljiang/"><i class="fa fa-linkedin fa-4x"></i></a></li>
+                <li><a href="http://stackoverflow.com/users/1339611/laputaprince"><i class="fa fa-stack-overflow fa-4x"></i></a></li>
+              </ul>
             </div>
           </li>
         </ul>
+        <div class="intro">
+          <div>
+            <p>I am</p>
+            <p>A Full Stack Developer</p>
+            <p>Who wanna be a Software Architect</p>
+          </div>
+          <!-- <p>Feel free to hover around to know more about me.</p> -->
+        </div>
       </div>
-      <div>hahahaha</div>
     </div>
   </div>
   <div class="profile">
     <h1>Zerong Jiang</h1>
     <h2>Programmer, Geek, Photographer</h2>
-    <p><a href="#" target="_blank">Blog</a></p>
-    <p><a href="#" target="_blank">Album</a></p>
-    <p><a href="#" target="_blank">Github</a></p>
-    <p><a href="#" target="_blank">Linkedin</a></p>
+    <p><a href="http://note.jzr.me" target="_blank">Blog</a></p>
+    <p><a href="http://album.jzr.me" target="_blank">Album</a></p>
+    <p><a href="http://github.com/denzeljiang" target="_blank">Github</a></p>
+    <p><a href="http://www.linkedin.com/in/denzeljiang/" target="_blank">Linkedin</a></p>
     <!-- <p><a href="http://weibo.com/j120" target="_blank">微博</a></p> -->
   </div>
 </div>
