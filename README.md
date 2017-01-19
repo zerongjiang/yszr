@@ -1,10 +1,9 @@
-The repo is for my Homepage [JZR.me](http://jzr.me)
+# Just another repo for Homepage
 
-Also containing some stuff **JUST FOR FUN**.
+Also random stuff for fun.
 
-* Say [Happy Birthday](http://jzr.me/min.html) to My GF.
+- Quickly add public SSH key.
 
-* Quickly add my public SSH key to a host.
   ```bash
-  curl -sL http://jzr.me/sshkeys >> ~/.ssh/authorized_keys
+  curl -sL https://jzr.me/sshkeys >> ~/.ssh/authorized_keys
   ```
